@@ -23,7 +23,6 @@ function App() {
 
 
   function addToDo(todo){
-    console.log("hwlloo");
     setTodos([todo, ...todos]);
   }
 
