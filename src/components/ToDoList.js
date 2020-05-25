@@ -1,9 +1,10 @@
 import React from "react";
 import ToDo from "./Todo";
+import {List} from "@material-ui/core"
 
 function ToDoList({ todos, toggleComplete, removeTodo}){
     return(
-        <ul>
+        <List>
             {todos.map(todo => (
                 <ToDo 
                 key={todo.id} 
@@ -12,7 +13,7 @@ function ToDoList({ todos, toggleComplete, removeTodo}){
                 removeTodo ={removeTodo}
                 ></ToDo>
             ))}
-        </ul>
+        </List>
     );
 }
 export default ToDoList;

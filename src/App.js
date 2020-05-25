@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react';
 import './App.css';
 import ToDoForm from "./components/ToDoForm"
 import ToDoList from "./components/ToDoList"
+import Typography from "@material-ui/core/Typography";
 const LOCAL_STORAGE_KEY = "react_todo_list_todos"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
 
   function addToDo(todo){
+    console.log("hwlloo");
     setTodos([todo, ...todos]);
   }
 
@@ -46,14 +48,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>React ToDo</p>
+        <Typography style= {{padding:16}} variant="h1">React To-Do</Typography>
         <ToDoForm addToDo={addToDo}></ToDoForm>
         <ToDoList todos={todos}
          toggleComplete={toggleComplete}
          removeTodo = {removeTodo}
          ></ToDoList>
-      </header>
     </div>
   );
 }
